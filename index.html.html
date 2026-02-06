@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patel Jivandaan Foundation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#b71c1c;
+  --secondary:#ffca28;
+  --dark:#111;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:#f9f9f9;color:#333}
+
+/* HEADER */
+header{
+  background:var(--primary);
+  padding:15px 20px;
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav h1{color:#fff;font-size:22px}
+
+/* MENU */
+nav ul{
+  display:flex;
+  list-style:none;
+}
+nav ul li{margin-left:18px}
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* HAMBURGER */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  background:
+  linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url('https://images.unsplash.com/photo-1509099836639-18ba1795216d');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+.hero h2{font-size:42px}
+
+/* SECTION */
+section{padding:60px 20px;text-align:center}
+section h2{color:var(--primary);margin-bottom:20px}
+
+/* ABOUT */
+.about{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.about img{
+  max-width:400px;
+  width:100%;
+  border-radius:10px;
+}
+.about div{max-width:500px;text-align:left}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+.card img{width:100%;height:180px;object-fit:cover}
+.card div{padding:20px}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* DONATE */
+.donate{background:var(--primary);color:#fff}
+.donate h2{color:#fff}
+.donate button{
+  background:var(--secondary);
+  border:none;
+  padding:12px 30px;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:#aaa;
+  padding:15px;
+  text-align:center;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 16px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  nav ul{
+    display:none;
+    flex-direction:column;
+    background:var(--primary);
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    text-align:center;
+  }
+  nav ul.show{display:flex}
+  nav ul li{margin:15px 0}
+  .hero h2{font-size:30px}
+  .about div{text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1>Patel Jivandaan</h1>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<ul id="menu">
+<li><a href="#home" onclick="closeMenu()">Home</a></li>
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#services" onclick="closeMenu()">Services</a></li>
+<li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+<li><a href="#donate" onclick="closeMenu()">Donate</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h2 id="heroTitle">Give Life Through Donation</h2>
+<p id="heroText">Saving lives by promoting organ and blood donation.</p>
+</div>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+<div class="about">
+<img src="https://images.unsplash.com/photo-1559027615-cdcb8cbbb6d5">
+<div>
+<p>
+Patel Jivandaan Foundation works to spread awareness about organ and blood donation and inspire people to save lives.
+</p>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="services">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<div><h3>Organ Donation</h3></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1615461066159-fea0960485d5">
+<div><h3>Blood Donation</h3></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144">
+<div><h3>Awareness Programs</h3></div>
+</div>
+
+</div>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+<img src="https://images.unsplash.com/photo-1597764699514-ec91cb2c09e7">
+</div>
+</section>
+
+<section class="donate" id="donate">
+<h2>Donate Now</h2>
+<button>Pay via UPI / Razorpay</button>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p>📧 info@pateljivandaan.org</p>
+<p>📞 +91 7007826343</p>
+</section>
+
+<footer>
+© 2026 Patel Jivandaan Foundation
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917007826343" target="_blank">💬</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+function closeMenu(){
+  document.getElementById("menu").classList.remove("show");
+}
+</script>
+
+</body>
+</html>
